@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #F3F4F6;
+  color: #1F2937;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', 'Inter', system-ui, sans-serif;
+}
+
+/* Custom slider styles */
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background: #1E3A8A;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(30, 58, 138, 0.3);
+  border: 3px solid white;
+  transition: all 0.2s ease;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(30, 58, 138, 0.4);
+}
+
+.slider::-moz-range-thumb {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background: #1E3A8A;
+  cursor: pointer;
+  border: 3px solid white;
+  box-shadow: 0 4px 8px rgba(30, 58, 138, 0.3);
+  transition: all 0.2s ease;
+}
+
+.slider::-webkit-slider-track {
+  background: #e5e7eb;
+  border-radius: 12px;
+  height: 12px;
+  border: none;
+}
+
+.slider::-moz-range-track {
+  background: #e5e7eb;
+  border-radius: 12px;
+  height: 12px;
+  border: none;
+}
+
+/* Focus styles */
+.slider:focus {
+  outline: none;
+}
+
+.slider:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 4px rgba(30, 58, 138, 0.2);
+}
+
+.slider:focus::-moz-range-thumb {
+  box-shadow: 0 0 0 4px rgba(30, 58, 138, 0.2);
+}
+
+/* Smooth transitions */
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Custom component styles */
+.btn-primary {
+  @apply bg-financial-primary text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-800 transition-all duration-200 shadow-soft hover:shadow-premium hover:scale-105;
+}
+
+.btn-secondary {
+  @apply border-2 border-financial-primary text-financial-primary px-8 py-4 rounded-xl font-semibold hover:bg-financial-primary hover:text-white transition-all duration-200 shadow-soft hover:shadow-premium hover:scale-105;
+}
+
+.card {
+  @apply bg-white rounded-xl shadow-soft p-8 hover:shadow-premium transition-all duration-200 border border-gray-100;
+}
+
+.premium-card {
+  @apply bg-white rounded-2xl shadow-premium p-8 border border-gray-100;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #1E3A8A 0%, #2563eb 50%, #3b82f6 100%);
+}
+
+.gradient-bg-secondary {
+  background: linear-gradient(135deg, #059669 0%, #10b981 50%, #34d399 100%);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
